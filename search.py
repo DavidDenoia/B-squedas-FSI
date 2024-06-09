@@ -106,7 +106,7 @@ def graph_search(problem, fringe):
         node = fringe.pop()
         cont += 1
         if problem.goal_test(node.state):
-            print("Generados:", len(fringe) + cont + 1, "Visitados:", cont, ", Coste total:", node.path_cost)
+            print("Generados:", len(fringe) + cont, "Visitados:", cont, ", Coste total:", node.path_cost)
             return node
         if node.state not in closed:
             closed[node.state] = True
